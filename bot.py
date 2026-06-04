@@ -1,7 +1,22 @@
+import subprocess
+import sys
 import io
 import logging
 import asyncio
 from datetime import datetime, timedelta
+
+# ===== АВТОУСТАНОВКА НЕДОСТАЮЩИХ БИБЛИОТЕК =====
+try:
+    import matplotlib
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib", "moexalgo"])
+    import matplotlib
+
+try:
+    import moexalgo
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "moexalgo"])
+    import moexalgo
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -131,6 +146,11 @@ async def spread_cmd(update, context):
 # ======= ЗАПУСК БОТА =======
 async def main():
     application = Application.builder().token(TELEGRAM_TOKEN).build()
+
+    # ПРИНУДИТЕЛЬНОЕ УДАЛЕНИЕ WEBHOOK ПРИ ЗАПУСКЕ
+    async with application:
+        await application.bot.delete_webhook()
+        logger.info("Webhook удалён, сообщения будут идти через polling.")
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("spread", spread_cmd))
