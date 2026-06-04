@@ -59,7 +59,7 @@ except (ImportError, OSError):
         sys.exit(1)
 
 # ======= НАСТРОЙКИ =======
-TELEGRAM_TOKEN = "8663503148:AAEr1Vss6v1vLHf47u1M-Vp_wbhIn0PLBd8"
+TELEGRAM_TOKEN = "8885452009:AAFBmG8idkXGSs_TBA0n-_9GkiR1WmA1-_4"
 CHAT_ID = 1234329121
 UPDATE_INTERVAL_MINUTES = 60
 DAYS_BACK = 6   # максимум 6 дней
