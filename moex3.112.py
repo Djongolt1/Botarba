@@ -80,7 +80,7 @@ def fetch_candles(ticker, start_date, end_date, interval='15'):
         'limit': 10000
     }
     try:
-        resp = requests.get(url, params=params, timeout=30)
+        resp = requests.get(url, params=params, timeout=60)
         resp.raise_for_status()
         data = resp.json()
         candles = data.get('candles', {})
