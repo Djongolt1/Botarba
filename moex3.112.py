@@ -48,7 +48,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 TELEGRAM_TOKEN = "8885452009:AAGxNl0iUCT2Q58jXm0DZ_h-ZDevQcYtqpw"  # замените при необходимости
 CHAT_ID = 1234329121
 UPDATE_INTERVAL_MINUTES = 60
-DAYS_BACK = 14  # максимум 7 дней
+DAYS_BACK = 7  # максимум 7 дней
 
 PAIRS = {
     "Мечел": ("MTLR", "MTLRP"),
