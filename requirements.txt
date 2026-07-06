@@ -1,5 +1,4 @@
 pandas
 matplotlib
-moexalgo
 python-telegram-bot
 apscheduler
