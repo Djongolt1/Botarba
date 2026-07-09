@@ -1,0 +1,5 @@
+matplotlib>=3.5.0
+pandas>=1.5.0
+python-telegram-bot[job-queue]>=20.0
+apscheduler>=3.9.0
+requests>=2.28.0
