@@ -61,7 +61,7 @@ except (ImportError, OSError):
         sys.exit(1)
 
 # ======= НАСТРОЙКИ =======
-TELEGRAM_TOKEN = "8885452009:AAFBmG8idkXGSs_TBA0n-_9GkiR1WmA1-_4"  # замените на свой токен
+TELEGRAM_TOKEN = "8885452009:AAGQ2c2qTZkqrLm_E66zehioGkG53D5lrls"  # замените на свой токен
 CHAT_ID = 1234329121               # ID чата (число)
 UPDATE_INTERVAL_MINUTES = 60       # автоотправка всех пар
 DAYS_BACK = 6                      # период в днях (максимум 6)
